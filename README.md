@@ -1,2 +1,3 @@
 # WKCVideoHorizontalScrollView
+
 图片和视频混合使用的banner视图
