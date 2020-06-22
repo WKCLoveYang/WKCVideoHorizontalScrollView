@@ -16,10 +16,7 @@
 		9139C57324A0CA01001497AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9139C57124A0CA01001497AD /* LaunchScreen.storyboard */; };
 		9139C58024A0CA09001497AD /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9139C57A24A0CA09001497AD /* 3.jpg */; };
 		9139C58124A0CA09001497AD /* launch.mov in Resources */ = {isa = PBXBuildFile; fileRef = 9139C57B24A0CA09001497AD /* launch.mov */; };
-		9139C58224A0CA09001497AD /* fcl_plus_baby.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9139C57C24A0CA09001497AD /* fcl_plus_baby.mp4 */; };
 		9139C58324A0CA09001497AD /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9139C57D24A0CA09001497AD /* 1.jpg */; };
-		9139C58424A0CA09001497AD /* fcl_plus_aging.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9139C57E24A0CA09001497AD /* fcl_plus_aging.mp4 */; };
-		9139C58524A0CA09001497AD /* fcl_plus_palm.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9139C57F24A0CA09001497AD /* fcl_plus_palm.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +30,7 @@
 		9139C57424A0CA01001497AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9139C57A24A0CA09001497AD /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		9139C57B24A0CA09001497AD /* launch.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = launch.mov; sourceTree = "<group>"; };
-		9139C57C24A0CA09001497AD /* fcl_plus_baby.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fcl_plus_baby.mp4; sourceTree = "<group>"; };
 		9139C57D24A0CA09001497AD /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
-		9139C57E24A0CA09001497AD /* fcl_plus_aging.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fcl_plus_aging.mp4; sourceTree = "<group>"; };
-		9139C57F24A0CA09001497AD /* fcl_plus_palm.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fcl_plus_palm.mp4; sourceTree = "<group>"; };
 		A3272232794AFD251D0FD535 /* Pods_pod_libs_SwiftCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pod_libs_SwiftCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67F1E1619C2A46556370DBA /* Pods-pod-libs-SwiftCommon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pod-libs-SwiftCommon.release.xcconfig"; path = "Target Support Files/Pods-pod-libs-SwiftCommon/Pods-pod-libs-SwiftCommon.release.xcconfig"; sourceTree = "<group>"; };
 		BC321BB7496F0F091AE48545 /* Pods-pod-libs-SwiftCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pod-libs-SwiftCommon.debug.xcconfig"; path = "Target Support Files/Pods-pod-libs-SwiftCommon/Pods-pod-libs-SwiftCommon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,9 +88,6 @@
 			children = (
 				9139C57D24A0CA09001497AD /* 1.jpg */,
 				9139C57A24A0CA09001497AD /* 3.jpg */,
-				9139C57E24A0CA09001497AD /* fcl_plus_aging.mp4 */,
-				9139C57C24A0CA09001497AD /* fcl_plus_baby.mp4 */,
-				9139C57F24A0CA09001497AD /* fcl_plus_palm.mp4 */,
 				9139C57B24A0CA09001497AD /* launch.mov */,
 				9139C56624A0CA00001497AD /* AppDelegate.swift */,
 				9139C56824A0CA00001497AD /* SceneDelegate.swift */,
@@ -172,11 +163,8 @@
 				9139C57324A0CA01001497AD /* LaunchScreen.storyboard in Resources */,
 				9139C58124A0CA09001497AD /* launch.mov in Resources */,
 				9139C57024A0CA01001497AD /* Assets.xcassets in Resources */,
-				9139C58224A0CA09001497AD /* fcl_plus_baby.mp4 in Resources */,
 				9139C56E24A0CA00001497AD /* Main.storyboard in Resources */,
 				9139C58024A0CA09001497AD /* 3.jpg in Resources */,
-				9139C58524A0CA09001497AD /* fcl_plus_palm.mp4 in Resources */,
-				9139C58424A0CA09001497AD /* fcl_plus_aging.mp4 in Resources */,
 				9139C58324A0CA09001497AD /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
