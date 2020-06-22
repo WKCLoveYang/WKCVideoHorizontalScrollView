@@ -1,0 +1,6 @@
+framework module Pods_pod_libs_SwiftCommon {
+  umbrella header "Pods-pod-libs-SwiftCommon-umbrella.h"
+
+  export *
+  module * { export * }
+}
