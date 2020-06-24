@@ -61,6 +61,7 @@ open class WKCVideoHorizontalScrollView: UIView {
     }
     
     deinit {
+        debugPrint("====== WKCVideoHorizontalScrollView is dealloc!!! ======")
         NotificationCenter.default.removeObserver(self)
     }
 }
@@ -133,7 +134,7 @@ extension WKCVideoHorizontalScrollView {
     
     fileprivate func addNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(onDidPlayToEnd(notification:)), name: NSNotification.Name(WKCImagePlayEndNotification), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(onDidPlayToEnd(notification:)), name: .AVPlayerItemDidPlayToEndTime, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidPlayToEnd(notification:)), name: NSNotification.Name(kWKCVideoPlayEndNotification), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(onApplicationBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(onApplicationEnterBack), name: UIApplication.didEnterBackgroundNotification, object: nil)
     }

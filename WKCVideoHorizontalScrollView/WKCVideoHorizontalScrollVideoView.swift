@@ -9,68 +9,54 @@
 import UIKit
 import AVFoundation
 
+public let kWKCVideoPlayEndNotification: String = "wkc.video.play.end"
+
 @objc open class WKCVideoHorizontalScrollVideoView: UIView {
 
-    @objc open var urls : Array<URL>? {
-        didSet {
-            self.playerItems.removeAll()
-            for url in self.urls ?? [] {
-                let item = AVPlayerItem(url: url)
-                self.playerItems.append(item)
+    @objc open var url : URL? {
+        willSet {
+            if let value = newValue {
+                let item = AVPlayerItem(url: value)
+                self.player.replaceCurrentItem(with: item)
+                self.player.seek(to: .zero)
             }
-            self.player.replaceCurrentItem(with: self.playerItems.first)
-            self.player.seek(to: .zero)
         }
     }
-    open var videoSize : CGSize?
-    @objc open var isRepeated : Bool = true
-    @objc open var autoPlayWhenAppBeActive : Bool = true
-    @objc open var isAutoPlayNext : Bool = true
-    @objc open var playCompletion : () -> Void = {}
-    @objc open var playLoopCompletion : () -> Void = {}
+    
     @objc open var isPlaying: Bool = false
     
-    fileprivate lazy var playerItems : Array<AVPlayerItem> = {
-        var playerItems = Array<AVPlayerItem>()
-        for url in self.urls ?? [] {
-            let item = AVPlayerItem(url: url)
-            playerItems.append(item)
-        }
-        return playerItems
-    }()
+    fileprivate var playItem: AVPlayerItem?
+    fileprivate var videoSize: CGSize?
     
     fileprivate lazy var player : AVPlayer = {
-        let player = AVPlayer(playerItem: self.playerItems.first)
+        let player = AVPlayer(playerItem: playItem)
         let layer = AVPlayerLayer(player: player)
         layer.shouldRasterize = true
         layer.rasterizationScale = UIScreen.main.scale
         layer.videoGravity = .resizeAspectFill
-        layer.frame = CGRect(origin: .zero, size: self.videoSize ?? CGSize.zero)
+        layer.frame = CGRect(origin: .zero, size: videoSize ?? CGSize.zero)
         self.layer.addSublayer(layer)
+        player.addPeriodicTimeObserver(forInterval: CMTime(value: 1, timescale: CMTimeScale(NSEC_PER_SEC)), queue: nil) { [weak self] (cmtime) in
+            if let weakSelf = self {
+                let progress = cmtime.seconds / CMTimeGetSeconds(weakSelf.playItem!.duration)
+                if (progress >= 1.0) {
+                    NotificationCenter.default.post(name: NSNotification.Name(kWKCVideoPlayEndNotification), object: nil)
+                    weakSelf.isPlaying = false
+                }
+            }
+        }
         return player
     }()
     
-    @objc public init(urls: Array<URL>, size: CGSize) {
-        self.urls = urls
+    @objc public init(url: URL?, size: CGSize) {
+        self.url = url
         self.videoSize = size
         super.init(frame: .zero)
-        self.initViews()
+        self.player.seek(to: .zero)
     }
     
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
-    fileprivate func initViews() {
-        NotificationCenter.default.addObserver(self, selector: #selector(completePlay(notification:)), name: .AVPlayerItemDidPlayToEndTime, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(applicationBeActive(notifcation:)), name: UIApplication.didBecomeActiveNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(applicationEnterBack(notification:)), name: UIApplication.didEnterBackgroundNotification, object: nil)
-
-        self.player.seek(to: .zero)        
     }
     
     @objc open func startPlay() {
@@ -87,45 +73,5 @@ import AVFoundation
     @objc open func stopPlay() {
         self.player.pause()
         isPlaying = false
-    }
-    
-    @objc fileprivate func completePlay(notification: Notification) {
-        var index = self.playerItems.firstIndex(of: notification.object as! AVPlayerItem)
-        
-        if index != nil {
-            index! += 1
-            if index! >= self.playerItems.count {
-                if !self.isRepeated {
-                    self.playCompletion()
-                    return
-                }
-                index = 0
-            }
-            
-            self.playLoopCompletion()
-            
-            if (self.isAutoPlayNext) {
-                self.player.replaceCurrentItem(with: self.playerItems[index!])
-                self.player.play()
-                isPlaying = true
-            } else {
-                DispatchQueue.main.asyncAfter(deadline: .now()+1) {
-                    self.player.replaceCurrentItem(with: self.playerItems[index!])
-                    self.isPlaying = false
-                }
-            }
-        }
-    }
-    
-    @objc fileprivate func applicationBeActive(notifcation: Notification) {
-        if self.autoPlayWhenAppBeActive {
-            self.startPlay()
-        }
-    }
-    
-    @objc fileprivate func applicationEnterBack(notification: Notification) {
-        if (self.autoPlayWhenAppBeActive) {
-            self.stopPlay()
-        }
     }
 }

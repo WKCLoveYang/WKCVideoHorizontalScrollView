@@ -16,7 +16,7 @@ open class WKCVideoHorizontalScrollPageView: UIView {
         willSet {
             guard let value = newValue else { return }
             if value.isVideo {
-                videoView.urls = [URL(fileURLWithPath: value.video!)]
+                videoView.url = URL(fileURLWithPath: value.video!)
                 videoView.isHidden = false
                 imageView.isHidden = true
             } else {
@@ -45,10 +45,8 @@ open class WKCVideoHorizontalScrollPageView: UIView {
     }()
     
     open lazy var videoView: WKCVideoHorizontalScrollVideoView = {
-        let view = WKCVideoHorizontalScrollVideoView(urls: [], size: contentView.bounds.size)
+        let view = WKCVideoHorizontalScrollVideoView(url: nil, size: contentView.bounds.size)
         view.frame = contentView.bounds
-        view.autoPlayWhenAppBeActive = false
-        view.isAutoPlayNext = false
         view.isHidden = true
         return view
     }()
