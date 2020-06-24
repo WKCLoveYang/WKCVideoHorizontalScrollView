@@ -1,6 +1,6 @@
 PODS:
   - iCarousel (1.8.3)
-  - WKCVideoHorizontalScrollView (1.8.9):
+  - WKCVideoHorizontalScrollView (1.9.1):
     - iCarousel
 
 DEPENDENCIES:
@@ -13,7 +13,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
-  WKCVideoHorizontalScrollView: 4544b561331a4d8fc19ef34b80551ba8ac78693a
+  WKCVideoHorizontalScrollView: bfb358c27c716d7dd1457fc145b22c8d2c3330e1
 
 PODFILE CHECKSUM: 32216295e76a257c6eabd0f4fe5015ced628ea78
 
