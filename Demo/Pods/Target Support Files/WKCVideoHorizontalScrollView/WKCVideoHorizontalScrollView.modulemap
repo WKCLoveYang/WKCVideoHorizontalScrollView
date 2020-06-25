@@ -1,6 +1,0 @@
-framework module WKCVideoHorizontalScrollView {
-  umbrella header "WKCVideoHorizontalScrollView-umbrella.h"
-
-  export *
-  module * { export * }
-}

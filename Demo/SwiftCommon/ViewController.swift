@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import WKCVideoHorizontalScrollView
+
 
 class ViewController: UIViewController, WKCVideoHorizontalScrollViewDelegate, WKCVideoHorizontalPageControlDelegate {
     
@@ -43,7 +43,7 @@ class ViewController: UIViewController, WKCVideoHorizontalScrollViewDelegate, WK
         
         view.addSubview(scrollView)
         view.addSubview(pageControl)
-        
+ 
         scrollView.reloadData()
     }
 
@@ -53,7 +53,7 @@ class ViewController: UIViewController, WKCVideoHorizontalScrollViewDelegate, WK
     }
     
     func videoHorizontalScrollViewPageView() -> WKCVideoHorizontalScrollPageView {
-        return WKCVideoHorizontalScrollPageView(itemSize: CGSize(width: 200, height: 200), magin: 15)
+        return WKCVideoHorizontalScrollPageView(itemSize: CGSize(width: 300, height: 200), magin: 15)
     }
     
     func videoHorizontalScrollViewCurrentItemIndexChanged(index: Int) {

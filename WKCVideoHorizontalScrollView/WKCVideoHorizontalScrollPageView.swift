@@ -27,6 +27,12 @@ open class WKCVideoHorizontalScrollPageView: UIView {
         }
     }
     
+    open var notificationIdentify: String? {
+        willSet {
+            videoView.notificationIdentify = newValue
+        }
+    }
+    
     open var isPlaying: Bool {
         return videoView.isPlaying
     }
@@ -53,6 +59,7 @@ open class WKCVideoHorizontalScrollPageView: UIView {
     
     fileprivate var itemSize: CGSize!
     fileprivate var magin: CGFloat!
+    fileprivate var notificationAfter: WKCVideoHorizontalScrollAfter = WKCVideoHorizontalScrollAfter()
 
     public convenience init(itemSize: CGSize, magin: CGFloat) {
         self.init()
@@ -79,29 +86,34 @@ extension WKCVideoHorizontalScrollPageView {
     
     open func startPlay() {
         guard let value = model else { return }
-        WKCVideoHorizontalScrollAfter.shared.invalidate()
+        notificationAfter.invalidate()
         if value.isVideo {
             videoView.startPlay()
         } else {
-            WKCVideoHorizontalScrollAfter.shared.after(interval: value.imageDuration) {
-                NotificationCenter.default.post(name: NSNotification.Name(WKCImagePlayEndNotification), object: nil)
+            notificationAfter.after(interval: value.imageDuration) { [weak self] in
+                if let weakself = self {
+                    NotificationCenter.default.post(name: NSNotification.Name(WKCImagePlayEndNotification), object: weakself.notificationIdentify)
+                }
             }
         }
     }
     
     open func restartPlay() {
         guard let value = model else { return }
-        WKCVideoHorizontalScrollAfter.shared.invalidate()
+        notificationAfter.invalidate()
         if value.isVideo {
             videoView.restartPlay()
         } else {
-            WKCVideoHorizontalScrollAfter.shared.after(interval: value.imageDuration) {
-                NotificationCenter.default.post(name: NSNotification.Name(WKCImagePlayEndNotification), object: nil)
+            notificationAfter.after(interval: value.imageDuration) { [weak self] in
+                if let weakself = self {
+                    NotificationCenter.default.post(name: NSNotification.Name(WKCImagePlayEndNotification), object: weakself.notificationIdentify)
+                }
             }
         }
     }
     
     open func stopPlay() {
         videoView.stopPlay()
+        notificationAfter.invalidate()
     }
 }

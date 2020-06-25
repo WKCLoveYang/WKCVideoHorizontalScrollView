@@ -10,8 +10,6 @@ import UIKit
 
 open class WKCVideoHorizontalScrollAfter: NSObject {
     
-    public static let shared: WKCVideoHorizontalScrollAfter = WKCVideoHorizontalScrollAfter()
-    
     fileprivate var timer: Timer?
     
     open func after(interval: TimeInterval, completion: (() -> ())?) {

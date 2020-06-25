@@ -1,20 +1,16 @@
 PODS:
   - iCarousel (1.8.3)
-  - WKCVideoHorizontalScrollView (1.9.1):
-    - iCarousel
 
 DEPENDENCIES:
-  - WKCVideoHorizontalScrollView
+  - iCarousel
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - iCarousel
-    - WKCVideoHorizontalScrollView
 
 SPEC CHECKSUMS:
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
-  WKCVideoHorizontalScrollView: bfb358c27c716d7dd1457fc145b22c8d2c3330e1
 
-PODFILE CHECKSUM: 32216295e76a257c6eabd0f4fe5015ced628ea78
+PODFILE CHECKSUM: 18f2388d1b3a689328b33e771fb305c42213f1fa
 
 COCOAPODS: 1.9.3

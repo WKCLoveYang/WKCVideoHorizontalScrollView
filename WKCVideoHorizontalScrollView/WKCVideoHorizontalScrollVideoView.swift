@@ -11,19 +11,22 @@ import AVFoundation
 
 public let kWKCVideoPlayEndNotification: String = "wkc.video.play.end"
 
-@objc open class WKCVideoHorizontalScrollVideoView: UIView {
+open class WKCVideoHorizontalScrollVideoView: UIView {
 
-    @objc open var url : URL? {
+    open var url : URL? {
         willSet {
             if let value = newValue {
                 let item = AVPlayerItem(url: value)
-                self.player.replaceCurrentItem(with: item)
-                self.player.seek(to: .zero)
+                playItem = item
+                player.replaceCurrentItem(with: item)
+                player.seek(to: .zero)
             }
         }
     }
     
-    @objc open var isPlaying: Bool = false
+    open var notificationIdentify: String?
+    
+    open var isPlaying: Bool = false
     
     fileprivate var playItem: AVPlayerItem?
     fileprivate var videoSize: CGSize?
@@ -40,7 +43,7 @@ public let kWKCVideoPlayEndNotification: String = "wkc.video.play.end"
             if let weakSelf = self {
                 let progress = cmtime.seconds / CMTimeGetSeconds(weakSelf.playItem!.duration)
                 if (progress >= 1.0) {
-                    NotificationCenter.default.post(name: NSNotification.Name(kWKCVideoPlayEndNotification), object: nil)
+                    NotificationCenter.default.post(name: NSNotification.Name(kWKCVideoPlayEndNotification), object: weakSelf.notificationIdentify)
                     weakSelf.isPlaying = false
                 }
             }
@@ -48,7 +51,7 @@ public let kWKCVideoPlayEndNotification: String = "wkc.video.play.end"
         return player
     }()
     
-    @objc public init(url: URL?, size: CGSize) {
+    public init(url: URL?, size: CGSize) {
         self.url = url
         self.videoSize = size
         super.init(frame: .zero)
@@ -59,19 +62,19 @@ public let kWKCVideoPlayEndNotification: String = "wkc.video.play.end"
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc open func startPlay() {
-        self.player.play()
+    open func startPlay() {
+        player.play()
         isPlaying = true
     }
     
-    @objc open func restartPlay() {
-        self.player.seek(to: .zero)
-        self.player.play()
+    open func restartPlay() {
+        player.seek(to: .zero)
+        player.play()
         isPlaying = true
     }
     
-    @objc open func stopPlay() {
-        self.player.pause()
+    open func stopPlay() {
+        player.pause()
         isPlaying = false
     }
 }
