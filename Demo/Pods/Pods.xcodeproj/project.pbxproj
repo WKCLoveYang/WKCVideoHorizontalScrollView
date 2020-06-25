@@ -7,19 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		451FFD533287853F01BD7D6E3908DE8E /* iCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E564CB0369451A26BCF85C69A8373E9 /* iCarousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56C7F41AF747F9A306B877E125079AEC /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB7D01ADEDD1776E999C158FA646656 /* iCarousel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		597574DC1BA4767AE0AF48B17C333C3B /* Pods-pod-libs-SwiftCommon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82DEE82D99E6685EF8FB09C9972CE4E8 /* Pods-pod-libs-SwiftCommon-dummy.m */; };
-		84ADDD465CB79E72C6DA896DA17AE93A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6193BDF9256B1B2DC71E7CF8BFFB3D /* QuartzCore.framework */; };
-		8C42431CDCC587FEFD994A6CFDA6396B /* iCarousel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62D7D9237A3C380568000DCB51C2E42C /* iCarousel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E65720E0DBA54A1530C1B6DE4098ED0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */; };
-		948A1944FFA2BB140D8085E083A274B8 /* Pods-pod-libs-SwiftCommon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA61C5114CBBBDF3B003C5C1E2186872 /* Pods-pod-libs-SwiftCommon-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9E63F9C0F14AF9E64470F10B66ABC207 /* iCarousel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDD82BBE1B02D7FB2C31BD37672A2D2 /* iCarousel-dummy.m */; };
-		CC0D6D399E3B58D7E2B504E7AF74BE73 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */; };
+		0DFC13446F552AE969E5334244F2FCE9 /* WKCVideoHorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F9A59B0C87F23C9794C13FE5760CC7 /* WKCVideoHorizontalScrollView.swift */; };
+		122284EE99EEB1F52715029690BDF017 /* iCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = F34C023B045BB32B4D7B98AD5C2397BD /* iCarousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2430D786371BB0C33C2B9A53143CB78A /* iCarousel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 965828FF2276BED5E0B51D8AA9F2F816 /* iCarousel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24D154BDE15EE539B3886F8B02A6F14E /* Pods-pod-libs-SwiftCommon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA61C5114CBBBDF3B003C5C1E2186872 /* Pods-pod-libs-SwiftCommon-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BB6EA6F21220059E9645FCA8EE6776A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2876DF68183762B15675EC185C6C13 /* Foundation.framework */; };
+		3F573CA91E234A91B8BF27A163D1DF56 /* WKCVideoHorizontalScrollAfter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E84A1CA7B92263D9072888782A3B27 /* WKCVideoHorizontalScrollAfter.swift */; };
+		4FBACCD0B6B7532455474BE769904DAE /* WKCVideoHorizontalScrollPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EBA9D6BD9451D588064511B894A720 /* WKCVideoHorizontalScrollPageView.swift */; };
+		5582E4C5DE311D132995A44FEDC63FC0 /* iCarousel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8FC2DFF93322954F4D6B6A3DD7943 /* iCarousel-dummy.m */; };
+		5EBCB6833353B74DFEECDF06B8A8E1FD /* Pods-pod-libs-SwiftCommon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82DEE82D99E6685EF8FB09C9972CE4E8 /* Pods-pod-libs-SwiftCommon-dummy.m */; };
+		60CBCBB38A81A14A48E9B398919EBE59 /* iCarousel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C066142ADD843AC9A3B8FD92C91B13A5 /* iCarousel.framework */; };
+		6479E02F731C9959D4AA2D4C20ADF23A /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = EED40FCB2AE5033CDF3C50CA30FE7CEC /* iCarousel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		83678E9306E445E25507C76E2693BFC1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5EB9B9EB3EA857424A1FDD4E753907 /* QuartzCore.framework */; };
+		AF2DA030AF7C65FED1585B10E4B1AC68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2876DF68183762B15675EC185C6C13 /* Foundation.framework */; };
+		C150E564E50C03C1E61DCF451BC43244 /* WKCVideoHorizontalScrollView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CA22E7BE1D290BB13E7699ABFFF49AA /* WKCVideoHorizontalScrollView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4106F033A32CEEA856E4B24F92E5890 /* WKCVideoHorizontalScrollVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC5AF7D2F0FA0DB7D11B92BB7501B8A /* WKCVideoHorizontalScrollVideoView.swift */; };
+		DC4929D0AADD4D4B42C355B06084FC52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2876DF68183762B15675EC185C6C13 /* Foundation.framework */; };
+		F3FA105011D1F314E95222348A50175F /* WKCVideoHorizontalScrollBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC00D62B2D6F2F9697629E809B3E27E /* WKCVideoHorizontalScrollBaseModel.swift */; };
+		F6E83C8DB296414184DD3B4CD47B8D8F /* WKCVideoHorizontalScrollView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCACE8160762C9ABCC8BD3A9ED14249 /* WKCVideoHorizontalScrollView-dummy.m */; };
+		FD7DEB4DF233D47FFD22874B74DD8250 /* WKCVideoHorizontalPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC462258B1C89ECA3E4A82FCB5375CCE /* WKCVideoHorizontalPageControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B0A9A618236CBBC5D74F4235B78878AE /* PBXContainerItemProxy */ = {
+		9DFF89C36867873774F5287BB4FB425D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 627652533EE86425C5A452F3F19BEFAA;
+			remoteInfo = WKCVideoHorizontalScrollView;
+		};
+		DE3344176B6247BB06C0B1AD5B58D804 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 548E0F26A10990707D8D4870D2490ACC;
+			remoteInfo = iCarousel;
+		};
+		F324A042C05FD41298AD7CF2B706C615 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -29,85 +53,137 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		078E2F516B4B67F4A5FB6FDD4D135EA5 /* iCarousel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iCarousel.modulemap; sourceTree = "<group>"; };
 		0A157D2F148B3B1FAAE779F2EAFFC021 /* Pods-pod-libs-SwiftCommon-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-pod-libs-SwiftCommon-acknowledgements.plist"; sourceTree = "<group>"; };
+		14E8FC2DFF93322954F4D6B6A3DD7943 /* iCarousel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iCarousel-dummy.m"; sourceTree = "<group>"; };
+		22F9A59B0C87F23C9794C13FE5760CC7 /* WKCVideoHorizontalScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WKCVideoHorizontalScrollView.swift; path = WKCVideoHorizontalScrollView/WKCVideoHorizontalScrollView.swift; sourceTree = "<group>"; };
+		2A1D45493C0A40C20FE91015DB835C40 /* iCarousel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iCarousel-prefix.pch"; sourceTree = "<group>"; };
+		2FC00D62B2D6F2F9697629E809B3E27E /* WKCVideoHorizontalScrollBaseModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WKCVideoHorizontalScrollBaseModel.swift; path = WKCVideoHorizontalScrollView/WKCVideoHorizontalScrollBaseModel.swift; sourceTree = "<group>"; };
+		3214DED639D86ACA689B40AC3413CC5A /* WKCVideoHorizontalScrollView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WKCVideoHorizontalScrollView-Info.plist"; sourceTree = "<group>"; };
 		329413088A2FD1767C51509D7B8A61BB /* Pods-pod-libs-SwiftCommon-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-pod-libs-SwiftCommon-acknowledgements.markdown"; sourceTree = "<group>"; };
-		390CD91F08CEBBB2EB591BC15231FCD6 /* iCarousel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iCarousel.release.xcconfig; sourceTree = "<group>"; };
+		36E84A1CA7B92263D9072888782A3B27 /* WKCVideoHorizontalScrollAfter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WKCVideoHorizontalScrollAfter.swift; path = WKCVideoHorizontalScrollView/WKCVideoHorizontalScrollAfter.swift; sourceTree = "<group>"; };
 		4359322A4D23B212B96610E265A83113 /* Pods-pod-libs-SwiftCommon.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-pod-libs-SwiftCommon.modulemap"; sourceTree = "<group>"; };
-		4BDD82BBE1B02D7FB2C31BD37672A2D2 /* iCarousel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iCarousel-dummy.m"; sourceTree = "<group>"; };
-		5E564CB0369451A26BCF85C69A8373E9 /* iCarousel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iCarousel.h; path = iCarousel/iCarousel.h; sourceTree = "<group>"; };
-		62D7D9237A3C380568000DCB51C2E42C /* iCarousel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iCarousel-umbrella.h"; sourceTree = "<group>"; };
-		669F4AB8BB25C73E6FF3F4233AC46CDC /* iCarousel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iCarousel.modulemap; sourceTree = "<group>"; };
+		4CCACE8160762C9ABCC8BD3A9ED14249 /* WKCVideoHorizontalScrollView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WKCVideoHorizontalScrollView-dummy.m"; sourceTree = "<group>"; };
+		587BA2983FEABE7FAFDEF1305CBF0F13 /* WKCVideoHorizontalScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WKCVideoHorizontalScrollView.debug.xcconfig; sourceTree = "<group>"; };
+		5E5EB9B9EB3EA857424A1FDD4E753907 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		69F0F7262582143269415225A8B1F823 /* Pods-pod-libs-SwiftCommon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pod-libs-SwiftCommon.release.xcconfig"; sourceTree = "<group>"; };
+		7C2876DF68183762B15675EC185C6C13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7E41B3224B5ED78CE406B083294B3821 /* Pods-pod-libs-SwiftCommon-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-pod-libs-SwiftCommon-Info.plist"; sourceTree = "<group>"; };
 		82DEE82D99E6685EF8FB09C9972CE4E8 /* Pods-pod-libs-SwiftCommon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-pod-libs-SwiftCommon-dummy.m"; sourceTree = "<group>"; };
 		933E8C73FB19282F75B9435A0D60359B /* Pods_pod_libs_SwiftCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_pod_libs_SwiftCommon.framework; path = "Pods-pod-libs-SwiftCommon.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B091CC7FE89BCFE1A4BE0FA270369CB /* iCarousel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iCarousel-prefix.pch"; sourceTree = "<group>"; };
+		965828FF2276BED5E0B51D8AA9F2F816 /* iCarousel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iCarousel-umbrella.h"; sourceTree = "<group>"; };
+		9AB6E41B750E20BBCDA055B00AA79510 /* WKCVideoHorizontalScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WKCVideoHorizontalScrollView.release.xcconfig; sourceTree = "<group>"; };
+		9CA22E7BE1D290BB13E7699ABFFF49AA /* WKCVideoHorizontalScrollView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKCVideoHorizontalScrollView-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		ACB7D01ADEDD1776E999C158FA646656 /* iCarousel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = iCarousel.m; path = iCarousel/iCarousel.m; sourceTree = "<group>"; };
-		AE5145D7234C78739128D6C5C4CE4ADD /* iCarousel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iCarousel-Info.plist"; sourceTree = "<group>"; };
-		C7FF0445F0B14F439CFA1451FD91096C /* iCarousel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iCarousel.debug.xcconfig; sourceTree = "<group>"; };
+		AB0E8D6A3EA8B1C50DE7EAC6C54B10F7 /* iCarousel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iCarousel.release.xcconfig; sourceTree = "<group>"; };
+		AC462258B1C89ECA3E4A82FCB5375CCE /* WKCVideoHorizontalPageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WKCVideoHorizontalPageControl.swift; path = WKCVideoHorizontalScrollView/WKCVideoHorizontalPageControl.swift; sourceTree = "<group>"; };
+		AD886A1993BC857A65FAA2B99A814FD6 /* iCarousel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iCarousel.debug.xcconfig; sourceTree = "<group>"; };
+		C066142ADD843AC9A3B8FD92C91B13A5 /* iCarousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1B4D8A0CD072E1EE80321367D0A2D02 /* WKCVideoHorizontalScrollView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKCVideoHorizontalScrollView-prefix.pch"; sourceTree = "<group>"; };
+		C4EBA9D6BD9451D588064511B894A720 /* WKCVideoHorizontalScrollPageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WKCVideoHorizontalScrollPageView.swift; path = WKCVideoHorizontalScrollView/WKCVideoHorizontalScrollPageView.swift; sourceTree = "<group>"; };
 		C8217EB109A6A34051F09192C29B676F /* iCarousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iCarousel.framework; path = iCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB6193BDF9256B1B2DC71E7CF8BFFB3D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E16AE3155C4756E3EB1FABE80B217CC0 /* WKCVideoHorizontalScrollView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WKCVideoHorizontalScrollView.modulemap; sourceTree = "<group>"; };
+		E5B39ED108F802AE2C5A3A939238AD64 /* WKCVideoHorizontalScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WKCVideoHorizontalScrollView.framework; path = WKCVideoHorizontalScrollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDC5AF7D2F0FA0DB7D11B92BB7501B8A /* WKCVideoHorizontalScrollVideoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WKCVideoHorizontalScrollVideoView.swift; path = WKCVideoHorizontalScrollView/WKCVideoHorizontalScrollVideoView.swift; sourceTree = "<group>"; };
+		EED40FCB2AE5033CDF3C50CA30FE7CEC /* iCarousel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = iCarousel.m; path = iCarousel/iCarousel.m; sourceTree = "<group>"; };
 		EF77761F9946F8DDCBFB7A085EBA2C46 /* Pods-pod-libs-SwiftCommon-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-pod-libs-SwiftCommon-frameworks.sh"; sourceTree = "<group>"; };
+		F2B19A9ABDCD1090E528C190C71A57FF /* iCarousel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iCarousel-Info.plist"; sourceTree = "<group>"; };
+		F34C023B045BB32B4D7B98AD5C2397BD /* iCarousel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iCarousel.h; path = iCarousel/iCarousel.h; sourceTree = "<group>"; };
 		F3C93EA6A5C4185820764996037BB3EC /* Pods-pod-libs-SwiftCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pod-libs-SwiftCommon.debug.xcconfig"; sourceTree = "<group>"; };
 		FA61C5114CBBBDF3B003C5C1E2186872 /* Pods-pod-libs-SwiftCommon-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-pod-libs-SwiftCommon-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B07A5FF09D35B582976D6D445155E718 /* Frameworks */ = {
+		075422AE866C7F134CB982D48ABA23EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC0D6D399E3B58D7E2B504E7AF74BE73 /* Foundation.framework in Frameworks */,
+				3BB6EA6F21220059E9645FCA8EE6776A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E80799964AE5A87DC5C1BAF6F942573F /* Frameworks */ = {
+		310C245E882E37A5EBA6AB0D93F0C9A3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E65720E0DBA54A1530C1B6DE4098ED0 /* Foundation.framework in Frameworks */,
-				84ADDD465CB79E72C6DA896DA17AE93A /* QuartzCore.framework in Frameworks */,
+				AF2DA030AF7C65FED1585B10E4B1AC68 /* Foundation.framework in Frameworks */,
+				60CBCBB38A81A14A48E9B398919EBE59 /* iCarousel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7869C3617B44C166BAC5F2736DB3938 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC4929D0AADD4D4B42C355B06084FC52 /* Foundation.framework in Frameworks */,
+				83678E9306E445E25507C76E2693BFC1 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+		4DEC79A459F852D69C8B1A6A20769654 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6C850C37433B9EAF70AA8EF4EC21FC43 /* iOS */,
+				E16AE3155C4756E3EB1FABE80B217CC0 /* WKCVideoHorizontalScrollView.modulemap */,
+				4CCACE8160762C9ABCC8BD3A9ED14249 /* WKCVideoHorizontalScrollView-dummy.m */,
+				3214DED639D86ACA689B40AC3413CC5A /* WKCVideoHorizontalScrollView-Info.plist */,
+				C1B4D8A0CD072E1EE80321367D0A2D02 /* WKCVideoHorizontalScrollView-prefix.pch */,
+				9CA22E7BE1D290BB13E7699ABFFF49AA /* WKCVideoHorizontalScrollView-umbrella.h */,
+				587BA2983FEABE7FAFDEF1305CBF0F13 /* WKCVideoHorizontalScrollView.debug.xcconfig */,
+				9AB6E41B750E20BBCDA055B00AA79510 /* WKCVideoHorizontalScrollView.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/WKCVideoHorizontalScrollView";
 			sourceTree = "<group>";
 		};
-		6C850C37433B9EAF70AA8EF4EC21FC43 /* iOS */ = {
+		64A3DF54E966795C0252D14D93B8C180 /* iCarousel */ = {
 			isa = PBXGroup;
 			children = (
-				EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */,
-				CB6193BDF9256B1B2DC71E7CF8BFFB3D /* QuartzCore.framework */,
+				F34C023B045BB32B4D7B98AD5C2397BD /* iCarousel.h */,
+				EED40FCB2AE5033CDF3C50CA30FE7CEC /* iCarousel.m */,
+				E4AFB8414233A7EA36F0043256C30951 /* Support Files */,
 			);
-			name = iOS;
+			name = iCarousel;
+			path = iCarousel;
 			sourceTree = "<group>";
 		};
-		B46AF1D47F4753FFB6520120943D63FA /* Products */ = {
+		6A7CF0F4DCE3EEE9ACC3F9D5A94979B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64A3DF54E966795C0252D14D93B8C180 /* iCarousel */,
+				DF4848AF293392F790983C2464E8A19F /* WKCVideoHorizontalScrollView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		968B77725263F4181EB8FF57F0312D69 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				C8217EB109A6A34051F09192C29B676F /* iCarousel.framework */,
 				933E8C73FB19282F75B9435A0D60359B /* Pods_pod_libs_SwiftCommon.framework */,
+				E5B39ED108F802AE2C5A3A939238AD64 /* WKCVideoHorizontalScrollView.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AB8417C06756575B798551CC250CE6E3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7C2876DF68183762B15675EC185C6C13 /* Foundation.framework */,
+				5E5EB9B9EB3EA857424A1FDD4E753907 /* QuartzCore.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				ED2AD11940207C53D20D5B7EFE14961D /* Pods */,
-				B46AF1D47F4753FFB6520120943D63FA /* Products */,
+				E6459738FFDA284D6B76DA895DCA2D47 /* Frameworks */,
+				6A7CF0F4DCE3EEE9ACC3F9D5A94979B7 /* Pods */,
+				968B77725263F4181EB8FF57F0312D69 /* Products */,
 				EFB6A4562EC1D3C55D725A3851D2D9E2 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -129,23 +205,43 @@
 			path = "Target Support Files/Pods-pod-libs-SwiftCommon";
 			sourceTree = "<group>";
 		};
-		E091E4137FF739E0BC8C50B03E5646A0 /* iCarousel */ = {
+		DF4848AF293392F790983C2464E8A19F /* WKCVideoHorizontalScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				5E564CB0369451A26BCF85C69A8373E9 /* iCarousel.h */,
-				ACB7D01ADEDD1776E999C158FA646656 /* iCarousel.m */,
-				F2F971C9940EF076917CAB6BBC9D185A /* Support Files */,
+				AC462258B1C89ECA3E4A82FCB5375CCE /* WKCVideoHorizontalPageControl.swift */,
+				36E84A1CA7B92263D9072888782A3B27 /* WKCVideoHorizontalScrollAfter.swift */,
+				2FC00D62B2D6F2F9697629E809B3E27E /* WKCVideoHorizontalScrollBaseModel.swift */,
+				C4EBA9D6BD9451D588064511B894A720 /* WKCVideoHorizontalScrollPageView.swift */,
+				EDC5AF7D2F0FA0DB7D11B92BB7501B8A /* WKCVideoHorizontalScrollVideoView.swift */,
+				22F9A59B0C87F23C9794C13FE5760CC7 /* WKCVideoHorizontalScrollView.swift */,
+				4DEC79A459F852D69C8B1A6A20769654 /* Support Files */,
 			);
-			name = iCarousel;
-			path = iCarousel;
+			name = WKCVideoHorizontalScrollView;
+			path = WKCVideoHorizontalScrollView;
 			sourceTree = "<group>";
 		};
-		ED2AD11940207C53D20D5B7EFE14961D /* Pods */ = {
+		E4AFB8414233A7EA36F0043256C30951 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E091E4137FF739E0BC8C50B03E5646A0 /* iCarousel */,
+				078E2F516B4B67F4A5FB6FDD4D135EA5 /* iCarousel.modulemap */,
+				14E8FC2DFF93322954F4D6B6A3DD7943 /* iCarousel-dummy.m */,
+				F2B19A9ABDCD1090E528C190C71A57FF /* iCarousel-Info.plist */,
+				2A1D45493C0A40C20FE91015DB835C40 /* iCarousel-prefix.pch */,
+				965828FF2276BED5E0B51D8AA9F2F816 /* iCarousel-umbrella.h */,
+				AD886A1993BC857A65FAA2B99A814FD6 /* iCarousel.debug.xcconfig */,
+				AB0E8D6A3EA8B1C50DE7EAC6C54B10F7 /* iCarousel.release.xcconfig */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/iCarousel";
+			sourceTree = "<group>";
+		};
+		E6459738FFDA284D6B76DA895DCA2D47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C066142ADD843AC9A3B8FD92C91B13A5 /* iCarousel.framework */,
+				AB8417C06756575B798551CC250CE6E3 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EFB6A4562EC1D3C55D725A3851D2D9E2 /* Targets Support Files */ = {
@@ -156,38 +252,31 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F2F971C9940EF076917CAB6BBC9D185A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				669F4AB8BB25C73E6FF3F4233AC46CDC /* iCarousel.modulemap */,
-				4BDD82BBE1B02D7FB2C31BD37672A2D2 /* iCarousel-dummy.m */,
-				AE5145D7234C78739128D6C5C4CE4ADD /* iCarousel-Info.plist */,
-				9B091CC7FE89BCFE1A4BE0FA270369CB /* iCarousel-prefix.pch */,
-				62D7D9237A3C380568000DCB51C2E42C /* iCarousel-umbrella.h */,
-				C7FF0445F0B14F439CFA1451FD91096C /* iCarousel.debug.xcconfig */,
-				390CD91F08CEBBB2EB591BC15231FCD6 /* iCarousel.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/iCarousel";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6416606083410EF9B342B065E71CA40E /* Headers */ = {
+		01DB4E08D8E16E08D51097EFC45A2D38 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C42431CDCC587FEFD994A6CFDA6396B /* iCarousel-umbrella.h in Headers */,
-				451FFD533287853F01BD7D6E3908DE8E /* iCarousel.h in Headers */,
+				C150E564E50C03C1E61DCF451BC43244 /* WKCVideoHorizontalScrollView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F29CC3A612693A5C065C3C6AEED22409 /* Headers */ = {
+		B10E1774C8A8E327F800206A4758D979 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				948A1944FFA2BB140D8085E083A274B8 /* Pods-pod-libs-SwiftCommon-umbrella.h in Headers */,
+				2430D786371BB0C33C2B9A53143CB78A /* iCarousel-umbrella.h in Headers */,
+				122284EE99EEB1F52715029690BDF017 /* iCarousel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E05CAC2B351C0FA9F7D9C2E52F6BA1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24D154BDE15EE539B3886F8B02A6F14E /* Pods-pod-libs-SwiftCommon-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,12 +285,12 @@
 /* Begin PBXNativeTarget section */
 		548E0F26A10990707D8D4870D2490ACC /* iCarousel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A464634D0732B47E0FDD0B02B322182B /* Build configuration list for PBXNativeTarget "iCarousel" */;
+			buildConfigurationList = 29BFF115F9B3C52E9A3BB0385A8C21DC /* Build configuration list for PBXNativeTarget "iCarousel" */;
 			buildPhases = (
-				6416606083410EF9B342B065E71CA40E /* Headers */,
-				8B35506D347717001114F114BE3AF9CF /* Sources */,
-				E80799964AE5A87DC5C1BAF6F942573F /* Frameworks */,
-				CFB0A3FEBB55B426BCADF1575FDD669E /* Resources */,
+				B10E1774C8A8E327F800206A4758D979 /* Headers */,
+				29F4DFD01A8431BC239248970E0FA525 /* Sources */,
+				C7869C3617B44C166BAC5F2736DB3938 /* Frameworks */,
+				24F736AEDCAF49D815523B3D86DD6952 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -212,19 +301,39 @@
 			productReference = C8217EB109A6A34051F09192C29B676F /* iCarousel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A4C422B6059A7913C23F274ACF7B91B2 /* Pods-pod-libs-SwiftCommon */ = {
+		627652533EE86425C5A452F3F19BEFAA /* WKCVideoHorizontalScrollView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 98BC53E13E3247E8BE503C44CC864FBA /* Build configuration list for PBXNativeTarget "Pods-pod-libs-SwiftCommon" */;
+			buildConfigurationList = D958A2FE7A6335D46EB7709DCF298A5C /* Build configuration list for PBXNativeTarget "WKCVideoHorizontalScrollView" */;
 			buildPhases = (
-				F29CC3A612693A5C065C3C6AEED22409 /* Headers */,
-				8FEF710A8794E2E55C323E5DE8F4F400 /* Sources */,
-				B07A5FF09D35B582976D6D445155E718 /* Frameworks */,
-				837A25BBE9A85F201BFDDC5317833583 /* Resources */,
+				01DB4E08D8E16E08D51097EFC45A2D38 /* Headers */,
+				1A8FFF0A08A8BEECDF3C54930F995FB4 /* Sources */,
+				310C245E882E37A5EBA6AB0D93F0C9A3 /* Frameworks */,
+				E5AB198D5B1D84EF5B3DD1D35D1B0432 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CB9E452A75F168DD24FA321E29BF9FA1 /* PBXTargetDependency */,
+				6475F085CE47E5F24F5B67AAAC6DCFC4 /* PBXTargetDependency */,
+			);
+			name = WKCVideoHorizontalScrollView;
+			productName = WKCVideoHorizontalScrollView;
+			productReference = E5B39ED108F802AE2C5A3A939238AD64 /* WKCVideoHorizontalScrollView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A4C422B6059A7913C23F274ACF7B91B2 /* Pods-pod-libs-SwiftCommon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0B00BA5413749B9D38B1468781882AB /* Build configuration list for PBXNativeTarget "Pods-pod-libs-SwiftCommon" */;
+			buildPhases = (
+				D4E05CAC2B351C0FA9F7D9C2E52F6BA1 /* Headers */,
+				9217D694F35F351D65253BEA61D2CFA7 /* Sources */,
+				075422AE866C7F134CB982D48ABA23EB /* Frameworks */,
+				C7351CEA5C44A389AFEB719FFEF85BEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E9759C11884DC756EA1484A756BBDBF /* PBXTargetDependency */,
+				DED259285F4D44E6D114E6413933EF07 /* PBXTargetDependency */,
 			);
 			name = "Pods-pod-libs-SwiftCommon";
 			productName = "Pods-pod-libs-SwiftCommon";
@@ -249,25 +358,33 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = B46AF1D47F4753FFB6520120943D63FA /* Products */;
+			productRefGroup = 968B77725263F4181EB8FF57F0312D69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				548E0F26A10990707D8D4870D2490ACC /* iCarousel */,
 				A4C422B6059A7913C23F274ACF7B91B2 /* Pods-pod-libs-SwiftCommon */,
+				627652533EE86425C5A452F3F19BEFAA /* WKCVideoHorizontalScrollView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		837A25BBE9A85F201BFDDC5317833583 /* Resources */ = {
+		24F736AEDCAF49D815523B3D86DD6952 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFB0A3FEBB55B426BCADF1575FDD669E /* Resources */ = {
+		C7351CEA5C44A389AFEB719FFEF85BEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5AB198D5B1D84EF5B3DD1D35D1B0432 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,70 +394,61 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8B35506D347717001114F114BE3AF9CF /* Sources */ = {
+		1A8FFF0A08A8BEECDF3C54930F995FB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E63F9C0F14AF9E64470F10B66ABC207 /* iCarousel-dummy.m in Sources */,
-				56C7F41AF747F9A306B877E125079AEC /* iCarousel.m in Sources */,
+				FD7DEB4DF233D47FFD22874B74DD8250 /* WKCVideoHorizontalPageControl.swift in Sources */,
+				3F573CA91E234A91B8BF27A163D1DF56 /* WKCVideoHorizontalScrollAfter.swift in Sources */,
+				F3FA105011D1F314E95222348A50175F /* WKCVideoHorizontalScrollBaseModel.swift in Sources */,
+				4FBACCD0B6B7532455474BE769904DAE /* WKCVideoHorizontalScrollPageView.swift in Sources */,
+				C4106F033A32CEEA856E4B24F92E5890 /* WKCVideoHorizontalScrollVideoView.swift in Sources */,
+				F6E83C8DB296414184DD3B4CD47B8D8F /* WKCVideoHorizontalScrollView-dummy.m in Sources */,
+				0DFC13446F552AE969E5334244F2FCE9 /* WKCVideoHorizontalScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8FEF710A8794E2E55C323E5DE8F4F400 /* Sources */ = {
+		29F4DFD01A8431BC239248970E0FA525 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				597574DC1BA4767AE0AF48B17C333C3B /* Pods-pod-libs-SwiftCommon-dummy.m in Sources */,
+				5582E4C5DE311D132995A44FEDC63FC0 /* iCarousel-dummy.m in Sources */,
+				6479E02F731C9959D4AA2D4C20ADF23A /* iCarousel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9217D694F35F351D65253BEA61D2CFA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EBCB6833353B74DFEECDF06B8A8E1FD /* Pods-pod-libs-SwiftCommon-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CB9E452A75F168DD24FA321E29BF9FA1 /* PBXTargetDependency */ = {
+		6475F085CE47E5F24F5B67AAAC6DCFC4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = iCarousel;
 			target = 548E0F26A10990707D8D4870D2490ACC /* iCarousel */;
-			targetProxy = B0A9A618236CBBC5D74F4235B78878AE /* PBXContainerItemProxy */;
+			targetProxy = F324A042C05FD41298AD7CF2B706C615 /* PBXContainerItemProxy */;
+		};
+		8E9759C11884DC756EA1484A756BBDBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WKCVideoHorizontalScrollView;
+			target = 627652533EE86425C5A452F3F19BEFAA /* WKCVideoHorizontalScrollView */;
+			targetProxy = 9DFF89C36867873774F5287BB4FB425D /* PBXContainerItemProxy */;
+		};
+		DED259285F4D44E6D114E6413933EF07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iCarousel;
+			target = 548E0F26A10990707D8D4870D2490ACC /* iCarousel */;
+			targetProxy = DE3344176B6247BB06C0B1AD5B58D804 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1DC501D437C6FFCA37EDC415FFEF0E3E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7FF0445F0B14F439CFA1451FD91096C /* iCarousel.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/iCarousel/iCarousel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/iCarousel/iCarousel-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/iCarousel/iCarousel.modulemap";
-				PRODUCT_MODULE_NAME = iCarousel;
-				PRODUCT_NAME = iCarousel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		257497152829C177993B5EC99C1D227A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -401,9 +509,47 @@
 			};
 			name = Release;
 		};
-		326DFFB1912F8DBE363E23012C886FD5 /* Release */ = {
+		6CED622C724EC96D9F0ECB6A26C7CE19 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 390CD91F08CEBBB2EB591BC15231FCD6 /* iCarousel.release.xcconfig */;
+			baseConfigurationReference = F3C93EA6A5C4185820764996037BB3EC /* Pods-pod-libs-SwiftCommon.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-pod-libs-SwiftCommon/Pods-pod-libs-SwiftCommon-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-pod-libs-SwiftCommon/Pods-pod-libs-SwiftCommon.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		858939E94A55A2496927757E4B051E3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB0E8D6A3EA8B1C50DE7EAC6C54B10F7 /* iCarousel.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -437,7 +583,44 @@
 			};
 			name = Release;
 		};
-		7B202BB37FCFFE5D04AF30AB1693C7D7 /* Release */ = {
+		9133862DA70AADD3FDFC14661F67A9CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AB6E41B750E20BBCDA055B00AA79510 /* WKCVideoHorizontalScrollView.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WKCVideoHorizontalScrollView/WKCVideoHorizontalScrollView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WKCVideoHorizontalScrollView/WKCVideoHorizontalScrollView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WKCVideoHorizontalScrollView/WKCVideoHorizontalScrollView.modulemap";
+				PRODUCT_MODULE_NAME = WKCVideoHorizontalScrollView;
+				PRODUCT_NAME = WKCVideoHorizontalScrollView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		957246AF4B3B65D84433DEF518C57A25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 69F0F7262582143269415225A8B1F823 /* Pods-pod-libs-SwiftCommon.release.xcconfig */;
 			buildSettings = {
@@ -476,12 +659,10 @@
 			};
 			name = Release;
 		};
-		7CD27DB1A6227AAAA3CEACB94233A916 /* Debug */ = {
+		98B459B3684D73B4B5E3B75D43047D86 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3C93EA6A5C4185820764996037BB3EC /* Pods-pod-libs-SwiftCommon.debug.xcconfig */;
+			baseConfigurationReference = AD886A1993BC857A65FAA2B99A814FD6 /* iCarousel.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -491,23 +672,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-pod-libs-SwiftCommon/Pods-pod-libs-SwiftCommon-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/iCarousel/iCarousel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iCarousel/iCarousel-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-pod-libs-SwiftCommon/Pods-pod-libs-SwiftCommon.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/iCarousel/iCarousel.modulemap";
+				PRODUCT_MODULE_NAME = iCarousel;
+				PRODUCT_NAME = iCarousel;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -578,9 +758,54 @@
 			};
 			name = Debug;
 		};
+		ECDB7F5B3A9F7724360A852F3CB60B7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 587BA2983FEABE7FAFDEF1305CBF0F13 /* WKCVideoHorizontalScrollView.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WKCVideoHorizontalScrollView/WKCVideoHorizontalScrollView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WKCVideoHorizontalScrollView/WKCVideoHorizontalScrollView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WKCVideoHorizontalScrollView/WKCVideoHorizontalScrollView.modulemap";
+				PRODUCT_MODULE_NAME = WKCVideoHorizontalScrollView;
+				PRODUCT_NAME = WKCVideoHorizontalScrollView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		29BFF115F9B3C52E9A3BB0385A8C21DC /* Build configuration list for PBXNativeTarget "iCarousel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98B459B3684D73B4B5E3B75D43047D86 /* Debug */,
+				858939E94A55A2496927757E4B051E3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -590,20 +815,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		98BC53E13E3247E8BE503C44CC864FBA /* Build configuration list for PBXNativeTarget "Pods-pod-libs-SwiftCommon" */ = {
+		C0B00BA5413749B9D38B1468781882AB /* Build configuration list for PBXNativeTarget "Pods-pod-libs-SwiftCommon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7CD27DB1A6227AAAA3CEACB94233A916 /* Debug */,
-				7B202BB37FCFFE5D04AF30AB1693C7D7 /* Release */,
+				6CED622C724EC96D9F0ECB6A26C7CE19 /* Debug */,
+				957246AF4B3B65D84433DEF518C57A25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A464634D0732B47E0FDD0B02B322182B /* Build configuration list for PBXNativeTarget "iCarousel" */ = {
+		D958A2FE7A6335D46EB7709DCF298A5C /* Build configuration list for PBXNativeTarget "WKCVideoHorizontalScrollView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DC501D437C6FFCA37EDC415FFEF0E3E /* Debug */,
-				326DFFB1912F8DBE363E23012C886FD5 /* Release */,
+				ECDB7F5B3A9F7724360A852F3CB60B7E /* Debug */,
+				9133862DA70AADD3FDFC14661F67A9CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
