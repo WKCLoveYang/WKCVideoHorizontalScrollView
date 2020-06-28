@@ -8,11 +8,11 @@
 
 import UIKit
 
-open class WKCVideoHorizontalScrollAfter: NSObject {
+public class WKCVideoHorizontalScrollAfter: NSObject {
     
     fileprivate var timer: Timer?
     
-    open func after(interval: TimeInterval, completion: (() -> ())?) {
+    public func after(interval: TimeInterval, completion: (() -> ())?) {
         timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: false, block: { (tim) in
             if let com = completion {
                 com()
@@ -21,7 +21,7 @@ open class WKCVideoHorizontalScrollAfter: NSObject {
         })
     }
 
-    open func invalidate() {
+    public func invalidate() {
         timer?.invalidate()
         timer = nil
     }

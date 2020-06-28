@@ -24,13 +24,13 @@ import iCarousel
     @objc optional func videoHorizontalScrollViewDidSelectItem(index: Int)
 }
 
-open class WKCVideoHorizontalScrollView: UIView {
+public class WKCVideoHorizontalScrollView: UIView {
     
     /// 代理
-    open weak var delegate: WKCVideoHorizontalScrollViewDelegate?
+    public weak var delegate: WKCVideoHorizontalScrollViewDelegate?
     
     /// 基础scrollView
-    open lazy var scrollView: iCarousel = {
+    public lazy var scrollView: iCarousel = {
         let view = iCarousel()
         view.isPagingEnabled = true
         view.scrollSpeed = 1.5
@@ -40,7 +40,7 @@ open class WKCVideoHorizontalScrollView: UIView {
     }()
     
     /// 不同的WKCVideoHorizontalScrollView对象, 区分彼此间通知用
-    open var notificationIdentify: String? {
+    public var notificationIdentify: String? {
         didSet {
             NotificationCenter.default.removeObserver(self, name: NSNotification.Name(WKCImagePlayEndNotification), object: oldValue)
             NotificationCenter.default.removeObserver(self, name: NSNotification.Name(kWKCVideoPlayEndNotification), object: oldValue)
@@ -62,7 +62,11 @@ open class WKCVideoHorizontalScrollView: UIView {
         super.init(frame: frame)
         
         addSubview(scrollView)
-        refreshNotifications()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(onApplicationBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onApplicationEnterBack), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidPlayToEnd(notification:)), name: NSNotification.Name(WKCImagePlayEndNotification), object: notificationIdentify)
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidPlayToEnd(notification:)), name: NSNotification.Name(kWKCVideoPlayEndNotification), object: notificationIdentify)
     }
     
     public required init?(coder: NSCoder) {
@@ -85,7 +89,7 @@ open class WKCVideoHorizontalScrollView: UIView {
 extension WKCVideoHorizontalScrollView {
     
     /// 刷新数据
-    open func reloadData() {
+    public func reloadData() {
         guard let de = delegate else { return }
         // 去接受整体数据
         if de.responds(to: #selector(WKCVideoHorizontalScrollViewDelegate.videoHorizontalScrollViewDataSource)) {
@@ -95,19 +99,6 @@ extension WKCVideoHorizontalScrollView {
         inner_reloadData()
     }
     
-    /// 刷新通知
-    open func refreshNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(onApplicationBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(onApplicationEnterBack), name: UIApplication.didEnterBackgroundNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(onDidPlayToEnd(notification:)), name: NSNotification.Name(WKCImagePlayEndNotification), object: notificationIdentify)
-        NotificationCenter.default.addObserver(self, selector: #selector(onDidPlayToEnd(notification:)), name: NSNotification.Name(kWKCVideoPlayEndNotification), object: notificationIdentify)
-    }
-    
-    /// 移除通知
-    open func removeNotifications() {
-        NotificationCenter.default.removeObserver(self)
-    }
-
 }
 
 

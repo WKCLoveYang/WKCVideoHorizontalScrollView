@@ -12,7 +12,7 @@ public let WKCImagePlayEndNotification: String = "wkc.image.play.end"
 
 open class WKCVideoHorizontalScrollPageView: UIView {
     
-    open var model: WKCVideoHorizontalScrollBaseModel? {
+    @objc open var model: WKCVideoHorizontalScrollBaseModel? {
         willSet {
             guard let value = newValue else { return }
             if value.isVideo {
@@ -27,30 +27,30 @@ open class WKCVideoHorizontalScrollPageView: UIView {
         }
     }
     
-    open var notificationIdentify: String? {
+    internal var notificationIdentify: String? {
         willSet {
             videoView.notificationIdentify = newValue
         }
     }
     
-    open var isPlaying: Bool {
+    internal var isPlaying: Bool {
         return videoView.isPlaying
     }
     
-    open lazy var contentView: UIView = {
+    public lazy var contentView: UIView = {
         let view = UIView(frame: CGRect(x: magin / 2.0, y: 0, width: itemSize.width - magin, height: itemSize.height))
         view.layer.masksToBounds = true
         return view
     }()
     
-    open lazy var imageView: UIImageView = {
+    public lazy var imageView: UIImageView = {
         let view = UIImageView(frame: contentView.bounds)
         view.contentMode = .scaleAspectFill
         view.isHidden = true
         return view
     }()
     
-    open lazy var videoView: WKCVideoHorizontalScrollVideoView = {
+    public lazy var videoView: WKCVideoHorizontalScrollVideoView = {
         let view = WKCVideoHorizontalScrollVideoView(url: nil, size: contentView.bounds.size)
         view.frame = contentView.bounds
         view.isHidden = true
@@ -78,13 +78,13 @@ open class WKCVideoHorizontalScrollPageView: UIView {
 extension WKCVideoHorizontalScrollPageView {
     
     /// 初始化, 子类重写此方法
-    open func setupSubviews() {
+    @objc open func setupSubviews() {
         addSubview(contentView)
         contentView.addSubview(imageView)
         contentView.addSubview(videoView)
     }
     
-    open func startPlay() {
+    internal func startPlay() {
         guard let value = model else { return }
         notificationAfter.invalidate()
         if value.isVideo {
@@ -98,7 +98,7 @@ extension WKCVideoHorizontalScrollPageView {
         }
     }
     
-    open func restartPlay() {
+    internal func restartPlay() {
         guard let value = model else { return }
         notificationAfter.invalidate()
         if value.isVideo {
@@ -112,7 +112,7 @@ extension WKCVideoHorizontalScrollPageView {
         }
     }
     
-    open func stopPlay() {
+    internal func stopPlay() {
         videoView.stopPlay()
         notificationAfter.invalidate()
     }

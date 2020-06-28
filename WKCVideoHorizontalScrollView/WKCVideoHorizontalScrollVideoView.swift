@@ -11,9 +11,9 @@ import AVFoundation
 
 public let kWKCVideoPlayEndNotification: String = "wkc.video.play.end"
 
-open class WKCVideoHorizontalScrollVideoView: UIView {
+public class WKCVideoHorizontalScrollVideoView: UIView {
 
-    open var url : URL? {
+    public var url : URL? {
         willSet {
             if let value = newValue {
                 let item = AVPlayerItem(url: value)
@@ -24,9 +24,9 @@ open class WKCVideoHorizontalScrollVideoView: UIView {
         }
     }
     
-    open var notificationIdentify: String?
+    internal var notificationIdentify: String?
     
-    open var isPlaying: Bool = false
+    internal var isPlaying: Bool = false
     
     fileprivate var playItem: AVPlayerItem?
     fileprivate var videoSize: CGSize?
@@ -62,18 +62,18 @@ open class WKCVideoHorizontalScrollVideoView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    open func startPlay() {
+    internal func startPlay() {
         player.play()
         isPlaying = true
     }
     
-    open func restartPlay() {
+    internal func restartPlay() {
         player.seek(to: .zero)
         player.play()
         isPlaying = true
     }
     
-    open func stopPlay() {
+    internal func stopPlay() {
         player.pause()
         isPlaying = false
     }
