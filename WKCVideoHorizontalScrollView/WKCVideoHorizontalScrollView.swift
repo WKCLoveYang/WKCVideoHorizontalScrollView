@@ -39,6 +39,15 @@ public class WKCVideoHorizontalScrollView: UIView {
         return view
     }()
     
+    /// 当前坐标
+    public var currentIndex: Int = 0 {
+        willSet {
+            DispatchQueue.main.async {
+                self.scrollView.currentItemIndex = newValue
+            }
+        }
+    }
+    
     /// 不同的WKCVideoHorizontalScrollView对象, 区分彼此间通知用
     public var notificationIdentify: String? {
         didSet {
@@ -77,6 +86,7 @@ public class WKCVideoHorizontalScrollView: UIView {
         super.layoutSubviews()
         
         scrollView.frame = self.bounds
+        reloadData()
     }
     
     deinit {
