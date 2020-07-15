@@ -27,9 +27,10 @@ open class WKCVideoHorizontalScrollPageView: UIView {
         }
     }
     
-    internal var notificationIdentify: String? {
+    internal var imageNotification: String = WKCImagePlayEndNotification
+    internal var videoNotification: String = kWKCVideoPlayEndNotification {
         willSet {
-            videoView.notificationIdentify = newValue
+            videoView.videoNotification = newValue
         }
     }
     
@@ -92,7 +93,7 @@ extension WKCVideoHorizontalScrollPageView {
         } else {
             notificationAfter.after(interval: value.imageDuration) { [weak self] in
                 if let weakself = self {
-                    NotificationCenter.default.post(name: NSNotification.Name(WKCImagePlayEndNotification), object: weakself.notificationIdentify)
+                    NotificationCenter.default.post(name: NSNotification.Name(weakself.imageNotification), object: nil)
                 }
             }
         }
@@ -106,7 +107,7 @@ extension WKCVideoHorizontalScrollPageView {
         } else {
             notificationAfter.after(interval: value.imageDuration) { [weak self] in
                 if let weakself = self {
-                    NotificationCenter.default.post(name: NSNotification.Name(WKCImagePlayEndNotification), object: weakself.notificationIdentify)
+                    NotificationCenter.default.post(name: NSNotification.Name(weakself.imageNotification), object: nil)
                 }
             }
         }

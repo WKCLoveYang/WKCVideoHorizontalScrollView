@@ -24,8 +24,7 @@ public class WKCVideoHorizontalScrollVideoView: UIView {
         }
     }
     
-    internal var notificationIdentify: String?
-    
+    internal var videoNotification: String = kWKCVideoPlayEndNotification
     internal var isPlaying: Bool = false
     
     fileprivate var playItem: AVPlayerItem?
@@ -43,7 +42,7 @@ public class WKCVideoHorizontalScrollVideoView: UIView {
             if let weakSelf = self {
                 let progress = cmtime.seconds / CMTimeGetSeconds(weakSelf.playItem!.duration)
                 if (progress >= 1.0) {
-                    NotificationCenter.default.post(name: NSNotification.Name(kWKCVideoPlayEndNotification), object: weakSelf.notificationIdentify)
+                    NotificationCenter.default.post(name: NSNotification.Name(weakSelf.videoNotification), object: nil)
                     weakSelf.isPlaying = false
                 }
             }

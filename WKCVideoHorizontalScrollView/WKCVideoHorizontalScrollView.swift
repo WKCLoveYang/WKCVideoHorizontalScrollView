@@ -48,37 +48,28 @@ public class WKCVideoHorizontalScrollView: UIView {
         }
     }
     
-    /// 不同的WKCVideoHorizontalScrollView对象, 区分彼此间通知用
-    public var notificationIdentify: String? {
-        didSet {
-            NotificationCenter.default.removeObserver(self, name: NSNotification.Name(WKCImagePlayEndNotification), object: oldValue)
-            NotificationCenter.default.removeObserver(self, name: NSNotification.Name(kWKCVideoPlayEndNotification), object: oldValue)
-            
-            NotificationCenter.default.addObserver(self, selector: #selector(onDidPlayToEnd(notification:)), name: NSNotification.Name(WKCImagePlayEndNotification), object: notificationIdentify)
-            NotificationCenter.default.addObserver(self, selector: #selector(onDidPlayToEnd(notification:)), name: NSNotification.Name(kWKCVideoPlayEndNotification), object: notificationIdentify)
-            
-            reloadData()
-        }
-    }
-    
+    fileprivate var imageNotification: String = WKCImagePlayEndNotification
+    fileprivate var videoNotification: String = kWKCVideoPlayEndNotification
     fileprivate var dataSource: [WKCVideoHorizontalScrollBaseModel]?
     fileprivate var itemSize: CGSize?
     fileprivate var itemSpacing: CGFloat?
     
     fileprivate var pageViewPool: [Int: WKCVideoHorizontalScrollPageView] = [Int: WKCVideoHorizontalScrollPageView]()
     
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
+        handleIdentifys()
         addSubview(scrollView)
         
         NotificationCenter.default.addObserver(self, selector: #selector(onApplicationBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(onApplicationEnterBack), name: UIApplication.didEnterBackgroundNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(onDidPlayToEnd(notification:)), name: NSNotification.Name(WKCImagePlayEndNotification), object: notificationIdentify)
-        NotificationCenter.default.addObserver(self, selector: #selector(onDidPlayToEnd(notification:)), name: NSNotification.Name(kWKCVideoPlayEndNotification), object: notificationIdentify)
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidPlayToEnd(notification:)), name: NSNotification.Name(imageNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidPlayToEnd(notification:)), name: NSNotification.Name(videoNotification), object: nil)
     }
     
-    public required init?(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -114,6 +105,17 @@ extension WKCVideoHorizontalScrollView {
 
 // MARK: InnerMethod
 extension WKCVideoHorizontalScrollView {
+    
+    fileprivate func handleIdentifys() {
+        let imageValue = identifyRandomCounts()
+        imageNotification = String.random(imageValue)
+        let videoValue = identifyRandomCounts()
+        videoNotification = String.random(videoValue)
+    }
+    
+    fileprivate func identifyRandomCounts() -> Int {
+        return Int(32 + arc4random() % 36)
+    }
     
     fileprivate func inner_reloadData() {
         DispatchQueue.main.async {
@@ -197,7 +199,8 @@ extension WKCVideoHorizontalScrollView: iCarouselDelegate, iCarouselDataSource {
         if pageView == nil {
             if let de = delegate, de.responds(to: #selector(WKCVideoHorizontalScrollViewDelegate.videoHorizontalScrollViewPageView)) {
                 pageView = de.videoHorizontalScrollViewPageView()
-                pageView?.notificationIdentify = notificationIdentify
+                pageView?.imageNotification = imageNotification
+                pageView?.videoNotification = videoNotification
                 pageViewPool[index] = pageView
             }
         }
